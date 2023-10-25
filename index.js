@@ -22,4 +22,7 @@ export const metadataViews = {
   smartContractExplanation: smartContractExplanationPath,
   transactionCode: transactionPath,
   transactionExplanation: transactionExplanationPath,
+  filters: {
+    difficulty: "beginner"
+  }
 };
