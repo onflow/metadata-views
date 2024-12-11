@@ -1,7 +1,5 @@
-The following functions are to be included in your NFT resource when creating a contract.
+The NFT resource in the contract is designed to provide a comprehensive metadata interface that allows users and applications to interact with the NFT in a meaningful way. The getViews function lists all the metadata views supported by the NFT, enabling others to understand the types of metadata the NFT can provide. For instance, these views might include details like display information, royalties, collection-specific data, and other standardized metadata views.
 
-getViews tells someone all the views your NFT has, while resolveView returns the metadata from that view.
+The resolveView function complements getViews by allowing users to retrieve the actual metadata associated with a specific view type. This function makes it possible to access detailed metadata for the NFT, such as its name, description, thumbnail, or any custom metadata provided by the contract.
 
-In your Collection resource you will have the borrowViewResolver function that is available in the Metadata Contract. You will need to import the MetadataViews.ResolverCollection interface into your collection.
-
-This returns the capability for the NFT to use the above functions.
+Additionally, the Collection resource includes a borrowViewResolver function, which adheres to the MetadataViews.ResolverCollection interface from the Metadata contract. This function provides a reference to the ViewResolver for a specific NFT within the collection, enabling seamless access to its metadata. By implementing MetadataViews.ResolverCollection, the Collection resource ensures compatibility with standardized metadata handling, making it easier for external applications and marketplaces to interact with and display information about the NFTs in the collection.
