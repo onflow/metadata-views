@@ -1,5 +1,5 @@
-Here we borrow the capability to use the borrowViewResolver function.
+In this transaction, we begin by borrowing the capability from the Collection resource that allows us to access the borrowViewResolver function. This function is key to retrieving a reference to the ViewResolver for a specific NFT within the collection.
 
-When that is done, we then have the ability to use the functions resolveView and getViews if they are in our NFT resource.
+nce we have this reference, we gain the ability to use two functions defined in the NFT resource: resolveView and getViews. The getViews function lets us identify all the metadata views supported by the NFT, providing insight into the kinds of metadata available. The resolveView function then enables us to retrieve the actual metadata associated with a specific view type, such as display information or other custom-defined metadata.
 
-After that we return the display.
+Finally, we use this functionality to access and return the Display metadata view, which typically includes details like the name, description, and thumbnail of the NFT. 
